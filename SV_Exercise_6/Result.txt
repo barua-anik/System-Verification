@@ -1,0 +1,174 @@
+vlog -f compile_questa_sv.f
+# QuestaSim vlog 10.4 Compiler 2014.12 Dec  2 2014
+# Start time: 13:54:13 on May 13,2016
+# vlog -reportprogress 300 -f compile_questa_sv.f 
+# -- Compiling package types_pkg
+# -- Compiling module Ex6_dut
+# -- Compiling module Ex6_clock_driver
+# -- Compiling interface Ex6_interface
+# -- Importing package types_pkg
+# -- Compiling package Ex6_pkg
+# ** Note: (vlog-2286) Using implicit +incdir+/soft/Mentor/Questa_10.4/questasim/uvm-1.1d/../verilog_src/uvm-1.1d/src from import uvm_pkg
+# -- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+# -- Compiling module top
+# -- Importing package Ex6_pkg
+# 
+# Top level modules:
+# 	top
+# End time: 13:54:14 on May 13,2016, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim +UVM_TESTNAME=Ex6_test -do "run -all" top
+# vsim 
+# Start time: 13:54:47 on May 13,2016
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading sv_std.std
+# Loading work.types_pkg(fast)
+# Loading mtiUvm.uvm_pkg
+# Loading work.Ex6_pkg(fast)
+# Loading work.top(fast)
+# Loading work.Ex6_dut(fast)
+# Loading work.Ex6_clock_driver(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.Ex6_interface(fast)
+# Loading /soft/Mentor/Questa_10.4/questasim/uvm-1.1d/linux/uvm_dpi.so
+# run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(215) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.2
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(217) @ 0: reporter [Questa UVM]  questa_uvm::init(+struct)
+# UVM_INFO @ 0: reporter [RNTST] Running test Ex6_test...
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ------------------------------------------------------------------
+# Name                       Type                        Size  Value
+# ------------------------------------------------------------------
+# uvm_test_top               Ex6_test                    -     @464 
+#   m_env                    Ex6_env                     -     @484 
+#     Ex6_agent              Ex6_agent                   -     @492 
+#       m_driver             Ex6_driver                  -     @525 
+#         ap                 uvm_analysis_port           -     @551 
+#         rsp_port           uvm_analysis_port           -     @542 
+#         seq_item_port      uvm_seq_item_pull_port      -     @533 
+#       m_monitor            Ex6_monitor                 -     @517 
+#         ap                 uvm_analysis_port           -     @684 
+#       m_sequencer          uvm_sequencer               -     @560 
+#         rsp_export         uvm_analysis_export         -     @568 
+#         seq_item_export    uvm_seq_item_pull_imp       -     @674 
+#         arbitration_queue  array                       0     -    
+#         lock_queue         array                       0     -    
+#         num_last_reqs      integral                    32    'd1  
+#         num_last_rsps      integral                    32    'd1  
+#     Ex6_analysis           Ex6_analysis                -     @500 
+#       _export              uvm_analysis_export         -     @699 
+#       _fifo_in             uvm_tlm_analysis_fifo #(T)  -     @708 
+#         analysis_export    uvm_analysis_imp            -     @752 
+#         get_ap             uvm_analysis_port           -     @743 
+#         get_peek_export    uvm_get_peek_imp            -     @725 
+#         put_ap             uvm_analysis_port           -     @734 
+#         put_export         uvm_put_imp                 -     @716 
+#       _fifo_out            uvm_tlm_analysis_fifo #(T)  -     @770 
+#         analysis_export    uvm_analysis_imp            -     @814 
+#         get_ap             uvm_analysis_port           -     @805 
+#         get_peek_export    uvm_get_peek_imp            -     @787 
+#         put_ap             uvm_analysis_port           -     @796 
+#         put_export         uvm_put_imp                 -     @778 
+#       _import              uvm_analysis_export         -     @761 
+#     sb                     Ex6_scoreboard              -     @508 
+#       axp_in               uvm_analysis_export         -     @823 
+#       axp_out              uvm_analysis_export         -     @832 
+#       cmp                  Ex6_comparator              -     @858 
+#         axp_in             uvm_analysis_export         -     @866 
+#         axp_out            uvm_analysis_export         -     @875 
+#         expfifo            uvm_tlm_analysis_fifo #(T)  -     @884 
+#           analysis_export  uvm_analysis_imp            -     @928 
+#           get_ap           uvm_analysis_port           -     @919 
+#           get_peek_export  uvm_get_peek_imp            -     @901 
+#           put_ap           uvm_analysis_port           -     @910 
+#           put_export       uvm_put_imp                 -     @892 
+#         outfifo            uvm_tlm_analysis_fifo #(T)  -     @937 
+#           analysis_export  uvm_analysis_imp            -     @981 
+#           get_ap           uvm_analysis_port           -     @972 
+#           get_peek_export  uvm_get_peek_imp            -     @954 
+#           put_ap           uvm_analysis_port           -     @963 
+#           put_export       uvm_put_imp                 -     @945 
+#       prd                  Ex6_predictor               -     @841 
+#         analysis_imp       uvm_analysis_imp            -     @849 
+#         results_ap         uvm_analysis_port           -     @990 
+# ------------------------------------------------------------------
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 30: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=3060   Expected value is =Result=3060 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 50: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=0   Expected value is =Result=0 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 70: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=65535   Expected value is =Result=65535 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 90: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=0   Expected value is =Result=0 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 110: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=158   Expected value is =Result=158 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 130: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=156   Expected value is =Result=156 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 150: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=0   Expected value is =Result=0 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 170: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=2870   Expected value is =Result=2870 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 190: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=42   Expected value is =Result=42 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 210: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=60   Expected value is =Result=60 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 230: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=525   Expected value is =Result=525 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 250: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=0   Expected value is =Result=0 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 270: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=153   Expected value is =Result=153 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 290: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=8   Expected value is =Result=8 
+# 
+# UVM_INFO Ex6_comparator.svh(45) @ 310: uvm_test_top.m_env.sb.cmp [PASS ] Actual value is =Result=65485   Expected value is =Result=65485 
+# 
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1268) @ 310: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO Ex6_comparator.svh(63) @ 310: uvm_test_top.m_env.sb.cmp [Ex6_comparator] 
+# 
+# 
+# *** TEST PASSED - 15 vectors ran, 15 vectors passed ***
+# 
+# Coverage of Req: covered = 9, total = 10 (88.89%)
+# Coverage of Instance 8.888889e+01
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   21
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [Ex6_comparator]     1
+# [PASS ]    15
+# [Questa UVM]     2
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     1
+# ** Note: $finish    : /soft/Mentor/Questa_10.4/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 310 ns  Iteration: 68  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /soft/Mentor/Questa_10.4/questasim/linux/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+quit -sim
+
